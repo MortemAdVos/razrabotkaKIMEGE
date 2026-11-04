@@ -1,0 +1,150 @@
+{
+  "exam_code": "math-profile",
+  "variant_number": 1,
+  "title": "Математика. Профильный уровень. Вариант 1 (Часть 1)",
+  "specification_version": "ЕГЭ-2026/ПРОФ/МАТ",
+  "total_tasks": 12,
+  "total_max_score": 12,
+  "total_time_minutes": 235,
+  "parts": [
+    {
+      "part_number": 1,
+      "answer_type": "short",
+      "tasks_count": 12,
+      "max_score": 12
+    }
+  ],
+  "tasks_distribution": [
+    {
+      "task_number": 1,
+      "topic_code": "7.1",
+      "topic_name": "Планиметрия. Треугольники и четырёхугольники",
+      "type": "short",
+      "difficulty": "basic",
+      "max_score": 1,
+      "estimated_time_min": 5
+    },
+    {
+      "task_number": 2,
+      "topic_code": "7.5",
+      "topic_name": "Стереометрия. Векторы в пространстве",
+      "type": "short",
+      "difficulty": "basic",
+      "max_score": 1,
+      "estimated_time_min": 5
+    },
+    {
+      "task_number": 3,
+      "topic_code": "7.3",
+      "topic_name": "Стереометрия. Простые фигуры в пространстве",
+      "type": "short",
+      "difficulty": "basic",
+      "max_score": 1,
+      "estimated_time_min": 5
+    },
+    {
+      "task_number": 4,
+      "topic_code": "6.2",
+      "topic_name": "Теория вероятностей. Классическая вероятность",
+      "type": "short",
+      "difficulty": "basic",
+      "max_score": 1,
+      "estimated_time_min": 4
+    },
+    {
+      "task_number": 5,
+      "topic_code": "6.2",
+      "topic_name": "Теория вероятностей. Условная вероятность и сложные события",
+      "type": "short",
+      "difficulty": "advanced",
+      "max_score": 1,
+      "estimated_time_min": 7
+    },
+    {
+      "task_number": 6,
+      "topic_code": "2.4",
+      "topic_name": "Прикладная задача. Чтение графиков и таблиц",
+      "type": "short",
+      "difficulty": "basic",
+      "max_score": 1,
+      "estimated_time_min": 5
+    },
+    {
+      "task_number": 7,
+      "topic_code": "4.1",
+      "topic_name": "Начала матанализа. Производная и геометрический смысл",
+      "type": "short",
+      "difficulty": "basic",
+      "max_score": 1,
+      "estimated_time_min": 5
+    },
+    {
+      "task_number": 8,
+      "topic_code": "1.1",
+      "topic_name": "Алгебра. Действия со степенями и корнями",
+      "type": "short",
+      "difficulty": "basic",
+      "max_score": 1,
+      "estimated_time_min": 4
+    },
+    {
+      "task_number": 9,
+      "topic_code": "2.2",
+      "topic_name": "Прикладная задача. Формулы и вычисления",
+      "type": "short",
+      "difficulty": "advanced",
+      "max_score": 1,
+      "estimated_time_min": 7
+    },
+    {
+      "task_number": 10,
+      "topic_code": "2.1",
+      "topic_name": "Текстовая задача (движение, работа, смеси)",
+      "type": "short",
+      "difficulty": "advanced",
+      "max_score": 1,
+      "estimated_time_min": 10
+    },
+    {
+      "task_number": 11,
+      "topic_code": "3.3",
+      "topic_name": "Алгебра. Чтение графиков функций",
+      "type": "short",
+      "difficulty": "advanced",
+      "max_score": 1,
+      "estimated_time_min": 6
+    },
+    {
+      "task_number": 12,
+      "topic_code": "4.2",
+      "topic_name": "Начала матанализа. Исследование функции (экстремумы)",
+      "type": "short",
+      "difficulty": "advanced",
+      "max_score": 1,
+      "estimated_time_min": 10
+    }
+  ],
+  "difficulty_distribution": {
+    "basic": 7,
+    "advanced": 5,
+    "high": 0
+  },
+  "topic_coverage": {
+    "7.1": 1,
+    "7.5": 1,
+    "7.3": 1,
+    "6.2": 2,
+    "2.4": 1,
+    "4.1": 1,
+    "1.1": 1,
+    "2.2": 1,
+    "2.1": 1,
+    "3.3": 1,
+    "4.2": 1
+  },
+  "grading_scale": {
+    "primary_max": 12,
+    "test_max": 100,
+    "threshold": 27
+  }
+}
