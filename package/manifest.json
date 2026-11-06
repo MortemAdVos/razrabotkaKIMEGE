@@ -11,7 +11,8 @@
   "components": {
     "tasks.json": {
       "mandatory": true,
-      "sha256": "b5c40e4203dc2789458c12a397bab8346ca530062e53e3415cf361424d1598ab"
+      "sha256": "8b5a1d6a464b78918619e40e269a13b5521701da2be019215f43501c428d7cc3",
+      "note": "включены поля ГИАЦ: content_codes, skill_codes, part, check_type (требование Формат данных v2, раздел 6)"
     },
     "variant_plan.json": {
       "mandatory": true,
@@ -33,8 +34,8 @@
     },
     "kim_giac.json": {
       "mandatory": false,
-      "sha256": null,
-      "note": "выгрузка для ГИАЦ, отдаётся после окончания экзамена"
+      "sha256": "c60b3a9892868c31f845c5ab91491db4da356cffb3b36ef527617e5b796bcd3d",
+      "note": "выгрузка для ГИАЦ (раздел 6 Формата v2): content_codes, skill_codes, part, check_type"
     },
     "scales_giac.json": {
       "mandatory": false,
