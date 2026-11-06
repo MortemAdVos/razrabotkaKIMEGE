@@ -11,7 +11,7 @@
   "components": {
     "tasks.json": {
       "mandatory": true,
-      "sha256": "b5c40e4203dc2789458c12a397bab8346ca530062e53e3415cf361424d1598ab"
+      "sha256": "5e67c5380e6e3449d9d1809ce81917f2177f9e1c7f6c79ed0d97aa2b7594d582"
     },
     "variant_plan.json": {
       "mandatory": true,
@@ -40,6 +40,10 @@
       "mandatory": false,
       "sha256": null,
       "note": "шкала перевода, ведёт отдел аналитического обеспечения"
+    },
+    "media/": {
+      "mandatory": false,
+      "note": "локальные копии изображений (36 файлов), пакет работает офлайн"
     }
   },
   "excluded_components": [

@@ -16,7 +16,8 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(page_title="Редактор КИМ — прототип", page_icon="📝", layout="wide")
-PACKAGE_DIR = Path(__file__).parent / "package"
+_HERE = Path(__file__).parent
+PACKAGE_DIR = _HERE if (_HERE / "tasks.json").exists() else _HERE / "package"
 SEED_FILE = Path(__file__).parent / "session_seed.json"
 
 SUBJECTS = {"02": "Математика (профильный уровень)"}  # федеральный справочник (Формат данных v2, раздел 5)
