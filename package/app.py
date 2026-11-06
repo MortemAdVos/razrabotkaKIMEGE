@@ -61,8 +61,8 @@ def assemble_variant(variant_no, bank, tree):
     }
 
 
-def build_package_zip(variant, plan, refs, manifest, instruction_md):
-    """Пакет КИМ одного варианта (структура ТЗ 7.2, только JSON)."""
+def build_package_zip(variant, plan, refs, manifest, instruction_md, media_dir=None):
+    """Пакет КИМ одного варианта (структура ТЗ 7.2, JSON + локальные media)."""
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("manifest.json", json.dumps(manifest, ensure_ascii=False, indent=2))
@@ -70,6 +70,16 @@ def build_package_zip(variant, plan, refs, manifest, instruction_md):
         z.writestr("variant_plan.json", json.dumps(plan, ensure_ascii=False, indent=2))
         z.writestr("reference_materials.json", json.dumps(refs, ensure_ascii=False, indent=2))
         z.writestr("instruction.md", instruction_md)
+        if media_dir and Path(media_dir).exists():
+            used = set()
+            for t in variant.get("tasks", []):
+                img = t.get("content", {}).get("image")
+                if img:
+                    used.add(Path(img).name)
+            for fname in used:
+                src = Path(media_dir) / fname
+                if src.exists():
+                    z.write(src, f"media/{fname}")
     return buf.getvalue()
 
 
@@ -157,8 +167,8 @@ if variant:
     if manifest is None:
         manifest = {"package_id": f"kim-ege-math-profile-2026-v{variant['variant']}",
                     "version": "1.0.0", "status": "ready_for_import"}
-    zip_bytes = build_package_zip(variant, plan, refs, manifest, instruction_md)
-    st.download_button("📦 Скачать пакет КИМ (ZIP: manifest + tasks + plan + reference_materials + instruction)",
+    zip_bytes = build_package_zip(variant, plan, refs, manifest, instruction_md, media_dir=PACKAGE_DIR / "media")
+    st.download_button("📦 Скачать пакет КИМ (ZIP: manifest + tasks + plan + reference_materials + instruction + media)",
                        data=zip_bytes,
                        file_name=f"kim_variant_{variant['variant']}.zip",
                        mime="application/zip")
