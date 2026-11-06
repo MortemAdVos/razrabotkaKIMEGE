@@ -1,0 +1,57 @@
+{
+  "package_id": "kim-ege-math-profile-2026-v1",
+  "exam_type": "EGE",
+  "subject_code": "02",
+  "subject": "Математика (профильный уровень)",
+  "exam_year": 2026,
+  "version": "1.0.0",
+  "status": "ready_for_import",
+  "created_at": "2026-11-06T00:00:00+03:00",
+  "created_by": "Отдел разработки КИМ (Методист-разработчик 2 / Технический редактор)",
+  "components": {
+    "tasks.json": {
+      "mandatory": true,
+      "sha256": "b5c40e4203dc2789458c12a397bab8346ca530062e53e3415cf361424d1598ab"
+    },
+    "variant_plan.json": {
+      "mandatory": true,
+      "sha256": "e50e10a429f92ce3076581545f8cb3d226816b2a231855da03ff42dc69f9eb20"
+    },
+    "branching_tree.json": {
+      "mandatory": true,
+      "sha256": "45411db28b9d7f660e11504a0fa0114609cedb8e800055b88e80cacb869c656c"
+    },
+    "reference_materials.json": {
+      "mandatory": true,
+      "sha256": "f2c9bbd7a9524eaab694998f0a4fee693438fda6e63aeb895b90cbf9461f49d0",
+      "note": "формулы дословно из официальной инструкции участника v1.0"
+    },
+    "instruction.md": {
+      "mandatory": true,
+      "sha256": "56d81c253ff453f2b745dc857aa3b884f787ae685c63895e2de044d6ea8a5a5d",
+      "note": "официальная инструкция заказчика v1.0 (instruction (v1.0).docx)"
+    },
+    "kim_giac.json": {
+      "mandatory": false,
+      "sha256": null,
+      "note": "выгрузка для ГИАЦ, отдаётся после окончания экзамена"
+    },
+    "scales_giac.json": {
+      "mandatory": false,
+      "sha256": null,
+      "note": "шкала перевода, ведёт отдел аналитического обеспечения"
+    }
+  },
+  "excluded_components": [
+    {
+      "component": "tasks (XML-экспорт)",
+      "reason": "Отделы Frontend и Backend отказались от XML; взаимодействие по JSON (ЗИ к ТЗ на FR-24/NFR-15)"
+    }
+  ],
+  "package_size_kb": 5147,
+  "prototype": {
+    "file": "app.py",
+    "stack": "Streamlit",
+    "note": "прототип интерфейса редактора КИМ для NFR-12/NFR-13; не входит в пакет КИМ"
+  }
+}
