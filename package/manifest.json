@@ -11,8 +11,7 @@
   "components": {
     "tasks.json": {
       "mandatory": true,
-      "sha256": "8b5a1d6a464b78918619e40e269a13b5521701da2be019215f43501c428d7cc3",
-      "note": "включены поля ГИАЦ: content_codes, skill_codes, part, check_type (требование Формат данных v2, раздел 6)"
+      "sha256": "5e67c5380e6e3449d9d1809ce81917f2177f9e1c7f6c79ed0d97aa2b7594d582"
     },
     "variant_plan.json": {
       "mandatory": true,
@@ -34,13 +33,17 @@
     },
     "kim_giac.json": {
       "mandatory": false,
-      "sha256": "c60b3a9892868c31f845c5ab91491db4da356cffb3b36ef527617e5b796bcd3d",
-      "note": "выгрузка для ГИАЦ (раздел 6 Формата v2): content_codes, skill_codes, part, check_type"
+      "sha256": null,
+      "note": "выгрузка для ГИАЦ, отдаётся после окончания экзамена"
     },
     "scales_giac.json": {
       "mandatory": false,
       "sha256": null,
       "note": "шкала перевода, ведёт отдел аналитического обеспечения"
+    },
+    "media/": {
+      "mandatory": false,
+      "note": "локальные копии изображений (36 файлов), пакет работает офлайн"
     }
   },
   "excluded_components": [
